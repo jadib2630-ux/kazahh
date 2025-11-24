@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAZZAH OFFICIAL</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #001f3f;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Neon Robot Style */
+    .neon {
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #00eaff;
+      box-shadow: 0 0 20px #00eaff;
+    }
+
+    #typingText {
+      width: 80%;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.5;
+      text-shadow: 0 0 8px #00eaff;
+      min-height: 120px;
+    }
+
+    /* Tombol langsung terlihat */
+    .btn {
+      padding: 14px 34px;
+      font-size: 18px;
+      background: linear-gradient(45deg, #00eaff, #00bcd4);
+      border: none;
+      color: #001f3f;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff inset;
+      display: inline-block; /* ← langsung tampil */
+      margin-top: 25px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #00eaff, 0 0 35px #00eaff inset;
+      background: linear-gradient(45deg, #00bcd4, #00eaff);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="center">
+    <img class="logo" src="https://h.top4top.io/p_36142mh141.jpg" alt="Kazzah Logo" />
+  </div>
+
+  <div id="typingText" class="neon"></div>
+
+  <div class="center">
+    <button class="btn" onclick="location.href='product.html'">Lanjut</button>
+  </div>
+
+  <script>
+    const text = "Selamat datang di KAZZAH OFFICIAL, ini adalah group store online yang menyediakan berbagai macam produk digital yang kalian butuh kan di dunia virtual ini, bermulai dari aplikasi premium yang murah meriah sampai jasa sadapan. Klik tombol di bawah ini untuk melihat list produk kami.";
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("typingText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 40);
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
+
+  <div style="text-align:center;margin-top:60px;color:#00eaff;text-shadow:0 0 8px #00eaff;opacity:0.7;font-size:14px;">
+    @ Powered By Kazzah Official
+  </div>
+
+</body>
+</html>
